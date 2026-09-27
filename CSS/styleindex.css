@@ -1,0 +1,126 @@
+/* estilo de toda la pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5f8;
+    padding: 40px;
+}
+
+
+/* contenedor principal */
+.contenedor {
+    width: 500px;
+    margin: 80px auto;
+    padding: 30px;
+
+    background-color: white;
+
+    border: 2px solid pink;
+    border-radius: 10px;
+}
+
+
+/* encabezado */
+.encabezado {
+    text-align: center;
+}
+
+
+/* etiqueta */
+.etiqueta {
+    color: #a8295e;
+    font-size: 14px;
+}
+
+
+/* titulo */
+h1 {
+    color: #96074a;
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+
+/* texto debajo del titulo */
+.encabezado p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+
+/* botones */
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* estilo de todos los botones */
+.btn {
+    padding: 12px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+/* colores de los botones */
+.exito {
+    background-color: #12a456;
+    color: #f8f9f9;
+}
+
+.error {
+    background-color: #ce2f2f;
+    color: #fcfcfc;
+}
+
+.advertencia {
+    background-color: #e4ac4b;
+    color: #fcfbfb;
+}
+
+.informacion {
+    background-color: #9444d1;
+    color: #f9f8fa;
+}
+
+
+/* cuando paso el mouse sobre un boton */
+.btn:hover {
+    background-color: #e59ac8;
+}
+
+
+/* texto de abajo */
+.instruccion {
+    text-align: center;
+
+    color: #888;
+
+    font-size: 12px;
+
+    margin-top: 25px;
+}
+
+
+/* para celulares */
+@media (max-width: 550px) {
+
+    .contenedor {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+}

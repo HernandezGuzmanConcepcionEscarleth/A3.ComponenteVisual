@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Componente Visual</title>
+
+    <!-- Estilo de la página -->
+    <link rel="stylesheet" href="CSS/styleindex.css">
+
+    <!-- Estilo de mi componente -->
+    <link rel="stylesheet" href="CSS/componente.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="encabezado">
+            <span class="etiqueta"><strong>-Mi librería-</strong></span>
+
+            <h1><em>Componente Visual de Notificaciones</em></h1>
+
+            <p>
+                Un componente sencillo para mostrar notificaciones
+                interactivas y personalizadas.
+            </p>
+        </div>
+
+        <div class="botones">
+
+            <button class="btn exito" onclick="mostrarExito()">
+                ✓ Éxito
+            </button>
+
+            <button class="btn error" onclick="mostrarError()">
+                × Error
+            </button>
+
+            <button class="btn advertencia" onclick="mostrarAdvertencia()">
+                ! Advertencia
+            </button>
+
+            <button class="btn informacion" onclick="mostrarInformacion()">
+                i Información
+            </button>
+
+
+    <!-- Primero se carga mi librería -->
+    <script src="JS/componente.js"></script>
+
+    <!-- Después las funciones de esta página -->
+    <script src="JS/index.js"></script>
+
+</body>
+
+</html>
