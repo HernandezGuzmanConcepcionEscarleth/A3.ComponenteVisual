@@ -1,7 +1,7 @@
 Actividad 3 Componente Visual Librería JavaScript de componentes visuales 
 Hernández Guzmán Concepción Escarleth    Programación Web
 # Demo en vivo: 
-https://github.com/HernandezGuzmanConcepcionEscarleth/A3.ComponenteVisual
+https://hernandezguzmanconcepcionescarleth.github.io/A3.ComponenteVisual/
 # RoseNotify - Componente Visual de Notificaciones
 
 ## ¿Qué es RoseNotify?
@@ -191,6 +191,12 @@ Componente Información:
 
 Componentes funcionando con distintos mensajes:
 <img width="2558" height="1168" alt="Captura de pantalla 2026-09-27 164046" src="https://github.com/user-attachments/assets/ffaf1daa-3f05-4a69-b7a7-71087aa33db1" />
+
+## Autor: 
+https://github.com/HernandezGuzmanConcepcionEscarleth/A3.ComponenteVisual
+
+## Video Demostrativo:
+
 
 
 
