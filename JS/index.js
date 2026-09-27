@@ -1,11 +1,11 @@
-// esta funcion muestra una notificacion cuando algo salio correctamente
+// esta funcion muestra una notificacion cuando los datos se guardaron correctamente
 function mostrarExito() {
 
     // llamo a rosenotify para mostrar la notificacion
     // primero pongo el titulo, despues el mensaje y al final el tipo
     RoseNotify.mostrar(
-        "¡Todo salió bien!",
-        "La información se guardó correctamente.",
+        "Datos guardados",
+        "El registro se realizó correctamente.",
         "exito"
     );
 
@@ -17,13 +17,9 @@ function mostrarError() {
 
     // llamo a rosenotify y le paso los datos que quiero mostrar
     RoseNotify.mostrar(
-        "Ocurrió un error",
-        "No fue posible completar la operación.",
-        "error",
-        {
-            // aqui indico que quiero que aparezca arriba a la izquierda
-            posicion: "superior-izquierda"
-        }
+        "Error de registro",
+        "Faltan datos por completar.",
+        "error"
     );
 
 }
@@ -32,15 +28,11 @@ function mostrarError() {
 // esta funcion muestra una notificacion de advertencia
 function mostrarAdvertencia() {
 
-    // uso rosenotify para mostrar el titulo, mensaje y tipo de notificacion
+    // uso rosenotify para mostrar un aviso antes de continuar
     RoseNotify.mostrar(
-        "Ten cuidado",
-        "Revisa la información antes de continuar.",
-        "advertencia",
-        {
-            // aqui cambio la duracion a 6000 milisegundos que son 6 segundos
-            duracion: 6000
-        }
+        "¡Cuidado!",
+        "Verifica tus datos antes de continuar.",
+        "advertencia"
     );
 
 }
@@ -49,15 +41,11 @@ function mostrarAdvertencia() {
 // esta funcion muestra una notificacion informativa
 function mostrarInformacion() {
 
-    // llamo a rosenotify para mostrar la informacion
+    // llamo a rosenotify para mostrar informacion al usuario
     RoseNotify.mostrar(
-        "Información",
-        "Hay una nueva actualización disponible.",
-        "informacion",
-        {
-            // aqui hago que la notificacion aparezca abajo a la derecha
-            posicion: "inferior-derecha"
-        }
+        "Nuevo mensaje",
+        "Tienes una nueva notificación.",
+        "informacion"
     );
 
 }
