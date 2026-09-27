@@ -13,6 +13,181 @@ La idea de este componente es poder mostrar notificaciones dentro de una página
 Cuenta con cuatro tipos de notificaciones: éxito, error, advertencia e información.
 
 ---
+## Instalación
+
+Para utilizar **RoseNotify** en mi proyecto primero tengo que agregar los archivos CSS y JavaScript del componente.
+
+El archivo CSS lo agrego dentro de la etiqueta `<head>`:
+
+```html
+<link rel="stylesheet" href="css/componente.css">
+```
+
+Después agrego el archivo JavaScript antes de cerrar la etiqueta `</body>`:
+
+```html
+<script src="js/componente.js"></script>
+```
+
+Un ejemplo de cómo quedaría en una página HTML es el siguiente:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Componente Visual</title>
+
+    <link rel="stylesheet" href="css/componente.css">
+</head>
+
+<body>
+
+    <h1>Componente Visual de Notificaciones</h1>
+
+    <script src="js/componente.js"></script>
+
+</body>
+
+</html>
+```
+
+---
+
+## Uso del componente
+
+Para mostrar las notificaciones utilizo la función `RoseNotify.mostrar()`.
+
+Su estructura es la siguiente:
+
+```javascript
+RoseNotify.mostrar("titulo", "mensaje", "tipo");
+```
+
+En esta función puedo cambiar el título, el mensaje y el tipo de notificación dependiendo de lo que necesite mostrar.
+
+---
+
+## Tipos de notificaciones
+
+Mi componente cuenta con **4 tipos de notificaciones**: éxito, error, advertencia e información.
+
+### 1. Notificación de éxito
+
+La utilizo para indicar que una acción se realizó correctamente.
+
+```javascript
+RoseNotify.mostrar(
+    "Datos guardados",
+    "El registro se realizó correctamente.",
+    "exito"
+);
+```
+
+Al ejecutarla aparece una notificación de color verde indicando que los datos fueron guardados correctamente.
+
+### 2. Notificación de error
+
+La utilizo cuando ocurre algún error o cuando una operación no puede realizarse correctamente.
+
+```javascript
+RoseNotify.mostrar(
+    "Error de registro",
+    "Faltan datos por completar.",
+    "error"
+);
+```
+
+Esta notificación aparece en color rojo para indicar que existe un problema.
+
+### 3. Notificación de advertencia
+
+La utilizo cuando quiero avisarle al usuario que debe revisar algo antes de continuar.
+
+```javascript
+RoseNotify.mostrar(
+    "¡Cuidado!",
+    "Verifica tus datos antes de continuar.",
+    "advertencia"
+);
+```
+
+La notificación aparece en color amarillo para diferenciarla de los demás mensajes.
+
+### 4. Notificación de información
+
+La utilizo para mostrar información o algún mensaje general al usuario.
+
+```javascript
+RoseNotify.mostrar(
+    "Nuevo mensaje",
+    "Tienes una nueva notificación.",
+    "informacion"
+);
+```
+
+Esta notificación aparece en color morado.
+
+---
+
+## Prueba desde la consola
+
+También probé mi componente directamente desde la consola del navegador para comprobar que las notificaciones pueden ejecutarse utilizando JavaScript y no solamente mediante los botones de la página.
+
+Para realizar la prueba utilicé las siguientes instrucciones:
+
+```javascript
+RoseNotify.mostrar("Datos guardados", "El registro se realizó correctamente.", "exito");
+
+RoseNotify.mostrar("Error de registro", "Faltan datos por completar.", "error");
+
+RoseNotify.mostrar("¡Cuidado!", "Verifica tus datos antes de continuar.", "advertencia");
+
+RoseNotify.mostrar("Nuevo mensaje", "Tienes una nueva notificación.", "informacion");
+```
+
+Al ejecutar las instrucciones se muestran las cuatro notificaciones al mismo tiempo, cada una con su propio color, icono, título y mensaje.
+
+---
+
+## Funcionamiento con botones
+
+En mi página principal también agregué cuatro botones para poder probar fácilmente cada tipo de notificación:
+
+- ✓ Éxito
+- × Error
+- ! Advertencia
+- i Información
+
+Cada botón llama una función de JavaScript que utiliza `RoseNotify.mostrar()`.
+
+Por ejemplo, para la notificación de éxito:
+
+```javascript
+function mostrarExito() {
+    RoseNotify.mostrar(
+        "Datos guardados",
+        "El registro se realizó correctamente.",
+        "exito"
+    );
+}
+```
+
+De la misma manera se pueden crear las funciones para los demás botones:
+
+```javascript
+mostrarExito();
+mostrarError();
+mostrarAdvertencia();
+mostrarInformacion();
+```
+
+De esta forma puedo probar cada notificación desde la interfaz de mi página o directamente desde la consola del navegador.
+
+---
 
 ## ¿Qué problema resuelve?
 
@@ -31,150 +206,8 @@ Con mi componente puedo:
 
 ---
 
-## Instalación
 
-Para utilizar RoseNotify en un proyecto web se deben agregar los archivos CSS y JavaScript del componente.
 
-Primero se agrega la hoja de estilos dentro de la etiqueta <head>:
-
-<link rel="stylesheet" href="css/componente.css">
-
-Después se agrega el archivo JavaScript antes de cerrar la etiqueta </body>:
-
-<script src="js/componente.js"></script>
-
-Un ejemplo completo sería:
-
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>RoseNotify</title>
-
-    <link rel="stylesheet" href="css/componente.css">
-</head>
-
-<body>
-
-    <h1>Prueba de RoseNotify</h1>
-
-    <script src="js/componente.js"></script>
-
-</body>
-
-</html>
-
-Uso con ejemplos de código
-
-1. Mostrar una notificación
-
-La función principal de mi componente es:
-
-RoseNotify.mostrar(titulo, mensaje, tipo, opciones);
-
-Con esta función puedo indicar el título de la notificación, el mensaje que quiero mostrar y el tipo de notificación.
-
-Por ejemplo:
-
-RoseNotify.mostrar(
-    "¡Todo salió bien!",
-    "La información se guardó correctamente.",
-    "exito"
-);
-
-Esto mostrará una notificación de éxito dentro de la página.
-
-2. Tipos de notificaciones
-
-RoseNotify cuenta con cuatro tipos diferentes de notificaciones.
-
-Éxito
-
-Se utiliza cuando una acción se realizó correctamente.
-
-RoseNotify.mostrar(
-    "¡Todo salió bien!",
-    "La información se guardó correctamente.",
-    "exito"
-);
-
-Error
-
-Se utiliza cuando ocurre algún problema.
-
-RoseNotify.mostrar(
-    "Ocurrió un error",
-    "No fue posible completar la operación.",
-    "error"
-);
-
-Advertencia
-
-Se utiliza para mostrar un aviso importante al usuario.
-
-RoseNotify.mostrar(
-    "Advertencia",
-    "Revisa la información antes de continuar.",
-    "advertencia"
-);
-
-Información
-
-Se utiliza para mostrar información general.
-
-RoseNotify.mostrar(
-    "Información",
-    "Tienes una nueva notificación.",
-    "informacion"
-);
-
-3. Personalización de la notificación
-
-También puedo agregar opciones para modificar algunas características de la notificación, como su duración y posición.
-
-Por ejemplo:
-
-RoseNotify.mostrar(
-    "Registro completado",
-    "Los datos fueron guardados correctamente.",
-    "exito",
-    {
-        duracion: 5000,
-        posicion: "superior-derecha"
-    }
-);
-
-En este caso:
-
-duracion indica cuánto tiempo permanecerá visible la notificación.
-
-posicion indica en qué parte de la pantalla aparecerá.
-
-Si no se especifica una duración, el componente utiliza de manera predeterminada 4000 milisegundos.
-
-4. Funciones de prueba
-
-Para facilitar las pruebas de mi componente también utilicé funciones que muestran cada uno de los tipos de notificación.
-
-function mostrarExito() {
-    RoseNotify.mostrar(
-        "¡Todo salió bien!",
-        "La información se guardó correctamente.",
-        "exito"
-    );
-}
-
-También se pueden utilizar funciones similares para los demás tipos:
-
-mostrarExito();
-mostrarError();
-mostrarAdvertencia();
-mostrarInformacion();
-
-Estas funciones pueden ser llamadas desde botones para comprobar fácilmente el funcionamiento de cada notificación.
 
 ## Capturas
 Componente Exito:
