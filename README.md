@@ -1,5 +1,6 @@
 Actividad 3 Componente Visual Librería JavaScript de componentes visuales 
-Hernández Guzmán Concepción Escarleth    Programación Web
+
+# Hernández Guzmán Concepción Escarleth    Programación Web
 # Demo en vivo: 
 https://hernandezguzmanconcepcionescarleth.github.io/A3.ComponenteVisual/
 # RoseNotify - Componente Visual de Notificaciones
