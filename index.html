@@ -19,33 +19,78 @@
     <div class="contenedor">
 
         <div class="encabezado">
-            <span class="etiqueta"><strong>-Mis Componentes-</strong></span>
 
-            <h1><em>Componente Visual de Notificaciones</em></h1>
+            <span class="etiqueta">
+                <strong>-Mis Componentes-</strong>
+            </span>
+
+            <h1>
+                <em>Componente Visual de Notificaciones</em>
+            </h1>
 
             <p>
                 Un componente sencillo para mostrar notificaciones
                 interactivas y personalizadas.
             </p>
+
         </div>
 
         <div class="botones">
 
-            <button class="btn exito" onclick="mostrarExito()">
-                ✓ Éxito
-            </button>
+            <!-- boton de exito -->
+            <div class="fila-notificacion">
 
-            <button class="btn error" onclick="mostrarError()">
-                × Error
-            </button>
+                <button
+                    id="btnExito"
+                    class="btn exito"
+                    onclick="mostrarExito()">
+                    ✓ Éxito
+                </button>
 
-            <button class="btn advertencia" onclick="mostrarAdvertencia()">
-                ! Advertencia
-            </button>
+            </div>
 
-            <button class="btn informacion" onclick="mostrarInformacion()">
-                i Información
-            </button>
+
+            <!-- boton de error -->
+            <div class="fila-notificacion">
+
+                <button
+                    id="btnError"
+                    class="btn error"
+                    onclick="mostrarError()">
+                    × Error
+                </button>
+
+            </div>
+
+
+            <!-- boton de advertencia -->
+            <div class="fila-notificacion">
+
+                <button
+                    id="btnAdvertencia"
+                    class="btn advertencia"
+                    onclick="mostrarAdvertencia()">
+                    ! Advertencia
+                </button>
+
+            </div>
+
+
+            <!-- boton de informacion -->
+            <div class="fila-notificacion">
+
+                <button
+                    id="btnInformacion"
+                    class="btn informacion"
+                    onclick="mostrarInformacion()">
+                    i Información
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
     <!-- Primero se carga mi librería -->

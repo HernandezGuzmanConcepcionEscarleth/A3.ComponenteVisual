@@ -1,31 +1,19 @@
-/* contenedor donde van a aparecer las notificaciones */
-.rose-contenedor {
-    position: fixed;
-    width: 320px;
-    z-index: 1000;
+/* fila donde esta el boton y la notificacion */
+
+.fila-notificacion {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
 }
 
 
-/* posiciones que puede tener la notificacion */
+/* el boton ocupa el espacio disponible */
 
-.superior-derecha {
-    top: 20px;
-    right: 20px;
-}
-
-.superior-izquierda {
-    top: 20px;
-    left: 20px;
-}
-
-.inferior-derecha {
-    bottom: 20px;
-    right: 20px;
-}
-
-.inferior-izquierda {
-    bottom: 20px;
-    left: 20px;
+.fila-notificacion .btn {
+    flex: 1;
 }
 
 
@@ -37,42 +25,41 @@
     display: flex;
     align-items: center;
 
+    width: 300px;
+
     background-color: white;
 
-    margin-bottom: 12px;
-    padding: 15px;
+    padding: 12px;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 
+    font-family: Arial, sans-serif;
+
     opacity: 0;
 
-    transform: translateY(-10px);
+    transform: translateX(15px);
 
     transition: 0.3s;
-
-    overflow: hidden;
-
-    font-family: Arial, sans-serif;
 }
 
 
-/* cuando aparece la notificacion */
+/* cuando aparece */
 
 .rose-notificacion.mostrar {
     opacity: 1;
 
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 
-/* cuando se cierra la notificacion */
+/* cuando se cierra */
 
 .rose-notificacion.ocultar {
     opacity: 0;
 
-    transform: translateY(-10px);
+    transform: translateX(15px);
 }
 
 
@@ -83,19 +70,23 @@
     height: 35px;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
-    margin-right: 12px;
+    flex-shrink: 0;
+
+    margin-right: 10px;
 
     border-radius: 50%;
 
     font-size: 18px;
+
     font-weight: bold;
 }
 
 
-/* espacio donde esta el titulo y el mensaje */
+/* contenido */
 
 .rose-contenido {
     flex: 1;
@@ -105,9 +96,9 @@
 /* titulo */
 
 .rose-contenido h3 {
-    margin: 0 0 5px 0;
+    margin: 0 0 4px 0;
 
-    font-size: 15px;
+    font-size: 14px;
 
     color: #5c4657;
 }
@@ -118,13 +109,13 @@
 .rose-contenido p {
     margin: 0;
 
-    font-size: 13px;
+    font-size: 12px;
 
     color: #8b7886;
 }
 
 
-/* boton para cerrar */
+/* boton x */
 
 .rose-cerrar {
     border: none;
@@ -133,7 +124,7 @@
 
     color: #a996a3;
 
-    font-size: 20px;
+    font-size: 19px;
 
     cursor: pointer;
 
@@ -141,28 +132,13 @@
 }
 
 
-/* cambia un poco cuando paso el mouse */
-
 .rose-cerrar:hover {
     color: #632f54;
 }
 
 
-/* barra que muestra el tiempo */
-
-.rose-barra {
-    position: absolute;
-
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 4px;
-}
-
-
 /* --------------------
-   notificacion de exito
+   exito
 -------------------- */
 
 .rose-exito {
@@ -171,16 +147,13 @@
 
 .rose-exito .rose-icono {
     background-color: #e4f2eb;
-    color: #235941;
-}
 
-.rose-exito .rose-barra {
-    background-color: #1c8857;
+    color: #235941;
 }
 
 
 /* --------------------
-   notificacion de error
+   error
 -------------------- */
 
 .rose-error {
@@ -189,16 +162,13 @@
 
 .rose-error .rose-icono {
     background-color: #f8e4e9;
-    color: #b45e75;
-}
 
-.rose-error .rose-barra {
-    background-color: #b61717;
+    color: #b45e75;
 }
 
 
 /* --------------------
-   notificacion de advertencia
+   advertencia
 -------------------- */
 
 .rose-advertencia {
@@ -207,16 +177,13 @@
 
 .rose-advertencia .rose-icono {
     background-color: #fff1da;
-    color: #ad7c35;
-}
 
-.rose-advertencia .rose-barra {
-    background-color: #df9527;
+    color: #ad7c35;
 }
 
 
 /* --------------------
-   notificacion de informacion
+   informacion
 -------------------- */
 
 .rose-informacion {
@@ -225,34 +192,24 @@
 
 .rose-informacion .rose-icono {
     background-color: #eee8f7;
+
     color: #79639b;
 }
 
-.rose-informacion .rose-barra {
-    background-color: #7133ce;
-}
 
+/* para celulares */
 
-/* para que tambien se vea bien en celular */
+@media (max-width: 800px) {
 
-@media (max-width: 500px) {
+    .fila-notificacion {
+        flex-direction: column;
 
-    .rose-contenedor {
-        width: calc(100% - 30px);
+        align-items: stretch;
     }
 
-    .superior-derecha,
-    .superior-izquierda {
-        top: 15px;
-        left: 15px;
-        right: auto;
-    }
 
-    .inferior-derecha,
-    .inferior-izquierda {
-        bottom: 15px;
-        left: 15px;
-        right: auto;
+    .rose-notificacion {
+        width: 100%;
     }
 
 }
